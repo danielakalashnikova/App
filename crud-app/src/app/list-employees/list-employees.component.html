@@ -1,0 +1,35 @@
+<div class="container col-md-12"> 
+    <div>
+        <button (click)="addEmployee()" class="btn btn-info">Add</button>
+      </div> 
+  <h2>All Employees</h2>  
+  <div class="table-responsive table-container">  
+    <table class="table table-dark table-hover table-striped">  
+      <thead class="thead-light">  
+        <tr>  
+          <th>First Name</th>  
+          <th>Last Name</th> 
+          <th>Email</th>
+          <th>Birthday</th>
+          <th>Action</th> 
+        </tr>  
+      </thead>  
+      <tbody>  
+        <tr *ngFor="let employee of employees"> 
+           
+          <td>{{employee.firstName}}</td>  
+          <td>{{employee.lastName}}</td>
+          <td>{{employee.email}}</td> 
+          <td>{{employee.birthday}}</td>
+
+           
+          <td>  
+            <button (click)="deleteEmployee(employee)" class="btn btn-info"> Delete</button>  
+            <button (click)="updateEmployee(employee)" style="margin-left: 20px;" class="btn btn-info"> Edit</button>  
+          </td>  
+        </tr>  
+      </tbody>  
+    </table>  
+  </div> 
+   
+</div> 
